@@ -1,0 +1,16 @@
+1、
+在声明property属性后，有2种实现选择
+@synthesize
+编译器期间，让编译器自动生成getter/setter方法。
+当有自定义的存或取方法时，自定义会屏蔽自动生成该方法
+ 
+@dynamic
+@dynamic 就是要告诉编译器，代码中用@dynamic修饰的属性，其getter和setter方法会在程序运行的时候或者用其他方式动态绑定，避免编译期间产生警告，以便让编译器通过编译。其主要的作用就是用在NSManagerObject对象的属性声明上，由于此类对象的属性一般是从Core Data的属性中生成的，core data 框架会在程序运行的时候为此类属性生成getter和setter方法。
+
+@synthesize  编译器期间，让编译器自动生成getter/setter方法。
+当有自定义的存或取方法时，自定义会屏蔽自动生成该方法。
+
+2、如果在UIView初始化时没有设置rect大小，将直接导致drawRect不被自动调用。
+正确初始化：
+UIView* myView =[[ UIView alloc]initWithFrame:CGRectMake(0,0,200,400)];
+创建了一块画布，定义相对于父窗口的位置， 以及大小。
