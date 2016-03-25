@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-export SYSTEM "http://xml.evernote.com/pub/evernote-export3.dtd">
+<en-export export-date="20160325T155150Z" application="Evernote" version="Evernote Mac 6.0.8 (451398)">
+<note><title>总结1</title><content><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<div><br/></div>
+<div>mac右击没有新建文件只有新建文件夹 新建文件夹就去终端</div>
+<div><en-media style="height: auto;" type="image/png" hash="3d98456e0a5b4eace8d1b48878fdcaa9"/></div>
+<div>touch：表示新建文件</div>
+<div>有*  意味着要传地址</div>
+<div>子路径和间接子路径</div>
+<div>NSFileManager ：</div>
+<div>srcpath 原路径</div>
+<div>dstpath 原路径</div>
+<div>mac 文件夹可以设置颜色</div>
+<div>NSData 用来存放二进制字节数据</div>
+<div>NSString 的方法：dataUsingEncoding把字符串转换成NSData</div>
+<div>方法名中有get 表明要提供指针</div>
+<div>
+<p style="color: rgb(0, 0, 0); font-family: HannotateSC-W5; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;"> //指示性   设置箭头，展开</p>
+<p style="color: rgb(0, 0, 0); font-family: HannotateSC-W5; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;">        //判断是否有子类目  有就有箭头，没有就不显示</p>
+<p style="color: rgb(0, 0, 0); font-family: HannotateSC-W5; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;">        if (subdata.count) {</p>
+<p style="color: rgb(0, 0, 0); font-family: HannotateSC-W5; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;">            </p>
+<p style="color: rgb(0, 0, 0); font-family: HannotateSC-W5; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;">            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;</p>
+<p style="color: rgb(0, 0, 0); font-family: HannotateSC-W5; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;">        }else{</p>
+<p style="color: rgb(0, 0, 0); font-family: HannotateSC-W5; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;">            cell.accessoryType = UITableViewCellAccessoryNone;</p>
+<p style="color: rgb(0, 0, 0); font-family: HannotateSC-W5; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;">            </p>
+</div>
+<div style="color: rgb(0, 0, 0); font-family: HannotateSC-W5; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+<div>        }</div>
+</div>
+<div><br/></div>
+<div><br/></div>
+<div>
+<p style="color: rgb(0, 0, 0); font-family: HannotateSC-W5; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;"><br/>
+- (void)addTimer{</p>
+<p style="color: rgb(0, 0, 0); font-family: HannotateSC-W5; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;">    self.timer = [NSTimer timerWithTimeInterval:5target:self selector:@selector(runScrollView) userInfo:nil repeats:YES];//info 传入控制的参数</p>
+<p style="color: rgb(0, 0, 0); font-family: HannotateSC-W5; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;">    [[NSRunLoop mainRunLoop] addTimer:self.timerforMode:NSRunLoopCommonModes];//加入住线程</p>
+<p style="color: rgb(0, 0, 0); font-family: HannotateSC-W5; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;">    </p>
+<p style="color: rgb(0, 0, 0); font-family: HannotateSC-W5; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;"/>
+</div>
+<div style="font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">}</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">popover  ：</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div>
+<p style="color: rgb(0, 0, 0); font-family: HannotateSC-W5; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;">//1.新建一个内容控制器</p>
+<p style="color: rgb(0, 0, 0); font-family: HannotateSC-W5; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;">    YYMenuViewController *menu=[[YYMenuViewController alloc]init];</p>
+<p style="color: rgb(0, 0, 0); font-family: HannotateSC-W5; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;">    </p>
+<p style="color: rgb(0, 0, 0); font-family: HannotateSC-W5; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;">    //2.新建一个popoverController，并设置其内容控制器</p>
+<p style="color: rgb(0, 0, 0); font-family: HannotateSC-W5; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;">    self.popover=[[UIPopoverController alloc]initWithContentViewController:menu];</p>
+<p style="color: rgb(0, 0, 0); font-family: HannotateSC-W5; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;">    </p>
+<p style="color: rgb(0, 0, 0); font-family: HannotateSC-W5; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;">    //3.设置尺寸</p>
+<p style="color: rgb(0, 0, 0); font-family: HannotateSC-W5; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;">    self.popover.popoverContentSize=CGSizeMake(300, 200);</p>
+<p style="color: rgb(0, 0, 0); font-family: HannotateSC-W5; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;">    </p>
+<p style="color: rgb(0, 0, 0); font-family: HannotateSC-W5; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;">    //4.显示</p>
+</div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div style="color: rgb(0, 0, 0); font-family: HannotateSC-W5; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+<div>    [self.popover presentPopoverFromBarButtonItem:self.navigationItem.leftBarButtonItem permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];</div>
+</div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">方法：</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">- (void)presentPopoverFromRect:(CGRect)rect inView:(UIView *)view permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections animated:(BOOL)animated;</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">rect ：指定箭头所指区域的矩形框范围（位置和尺寸），以view的左上角为坐标原点</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">view ：rect参数是以view的左上角为坐标原点（0，0）</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">arrowDirections ：箭头的方向</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">animated ：是否通过动画显示出来</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">textfield.borderStyle=UITextBorderStyleBezel;//内有阴影的边框</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">textfield.placeholder=@&quot;password&quot;;//密码提示</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">textfield.clearButtonMode=UITextFieldViewModeAlways;</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">textfield.text=@&quot;一开始就有字&quot;;</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">textfield.secureTextEntry=YES;//密文输入</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">textfield.adjustsFontSizeToFitWidth=YES;//适应大小</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">UIAlertController* alert = [UIAlertController alertControllerWithTitle:@&quot;温馨提示&quot;</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">message:@&quot;massage&quot;</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">preferredStyle:UIAlertControllerStyleAlert];</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">新的alert用法</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@&quot;确定&quot; style:UIAlertActionStyleDefault</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">handler:^(UIAlertAction * action) {}];</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">[alert addAction:defaultAction];</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">[self presentViewController:alert animated:YES completion:nil];</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">网络请求</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">- (void)startRequest</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">{</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">NSURL *url = [NSURL URLWithString:@&quot;http://image.photophoto.cn/nm-6/018/030/0180300244.jpg&quot;];//建立一个链接地址</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">//网络请求的载体</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">NSURLRequest *request = [NSURLRequest requestWithURL:url];</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">//发网络请求</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">[NSURLConnection connectionWithRequest:request delegate:self];</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">self.receiveData = [NSMutableData data];//完成数据初始化，可变对象必须先初始化，才可拼接</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">/*</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">//线程卡死</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">UIImage *image = [UIImage imageWithData:data];//image本身是图片，是无法看到的</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">_imageView.image = image;</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">*/</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">}</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">//接受到响应信息 —— 第一个返回的消息</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">{</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">NSLog(@&quot;%@&quot;,response);</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">}</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">//接收数据 非一次性</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">{</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">[self.receiveData appendData:data];//将每次返回的数据，拼接到原数据上</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">NSLog(@&quot;%@&quot;,data);</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">}</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">//接受数据结束</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">- (void)connectionDidFinishLoading:(NSURLConnection *)connection</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">{</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">//处理返回数据，转换成可识别的数据类型</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">UIImage *image = [UIImage imageWithData:self.receiveData];//image本身是图片，是无法看到的</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">_imageView.image = image;//必须放到视图上，才可见</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">}</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">{</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">//没有连上服务器，或服务器不响应本次请求</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">NSLog(@&quot;error = %@&quot;,error);</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">//</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@&quot;温馨提示&quot; message:@&quot;请检查网络连接&quot; delegate:nil cancelButtonTitle:@&quot;确定&quot; otherButtonTitles:nil, nil];</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">[alert show];</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">}</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">手势：</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">-(void)PinchAction:(UIPinchGestureRecognizer *)pinch{</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">float scale=pinch.scale;</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">pinch.view.transform=CGAffineTransformScale(pinch.view.transform, scale, scale);</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">if (scale&gt;1) {</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">_genstureLabel.text=@&quot;捏合放大&quot;;</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">}</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">else if (scale&lt;1) {</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">_genstureLabel.text=@&quot;捏合缩小&quot;;</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">}</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">//视图缩放 第一个参数是大小 第二个参数是x方向缩放比例 第三个方向是Y方向放大比例scale &gt;1放大</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">}</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">旋转：</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">-(void)RotationAction:(UIRotationGestureRecognizer *)rotationGes{</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">rotationGes.view.transform=CGAffineTransformRotate(rotationGes.view.transform, rotationGes.rotation);</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">//旋转弧度 单位是弧度每秒</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">rotationGes.rotation=M_PI;//旋转180度</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">_genstureLabel.text=@&quot;旋转&quot;;</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">}</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">拖动：</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">-(void)PanAction:(UIPanGestureRecognizer *)pan{</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">//拖移要求对坐标的改变 移动的坐标值</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">CGPoint translation=[pan translationInView:self.view];</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">//计算移动后的坐标</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">pan.view.center=CGPointMake(pan.view.center.x+translation.x,pan.view.center.y+translation.y);//中心坐标加移动坐标</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">[pan setTranslation:CGPointZero inView:self.view];</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">//设置坐标 （0 ，0）和速度</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">_genstureLabel.text=@&quot;把我放哪啊&quot;;</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">}</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">#pragma mark-Pan 拖移手势</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">-(void)PanGesture{</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">//初始化</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">UIPanGestureRecognizer *pan=[[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(PanAction:)];</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">pan.minimumNumberOfTouches=1;//设置最小touch对象</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">pan.maximumNumberOfTouches=2;//设置最大touch对象</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">[_genstureLabel addGestureRecognizer:pan];</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">// - (CGPoint)translationInView:(UIView *)view; 此方法返回值为坐标</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">//- (void)setTranslation:(CGPoint)translation inView:(UIView *)view; 此方法设定坐标值</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">// - (CGPoint)velocityInView:(UIView *)view; 计算移动速度 单位为像素每秒</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">}</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;"><br/></span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">//两个手指单击</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">UITapGestureRecognizer *tap3=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(SigleTwoFingerTap:)];</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">tap3.numberOfTouchesRequired=2;</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">[tap2 requireGestureRecognizerToFail:tap3];</span></span></div>
+<div><span style="font-size: 12px;"><span style="font-family: HannotateSC-W5;">[self.view addGestureRecognizer:tap3];</span></span></div>
+<div><span style="font: 14.0px Menlo; font-variant-ligatures: no-common-ligatures; color: #9ef1fd"><br/></span></div>
+<div>UIGestureRecognizer 定义所有手势的基本行为</div>
+<div>UITapGestureRecognizer tap点击</div>
+<div>UIPinchGestureRecognizer pinch捏合</div>
+<div>UIRotationGestureRecognizer rotation 旋转</div>
+<div>UISwipeGestureRecognizer swipe 轻扫 快速移动 用于监测滑动的方向</div>
+<div>UIPanGestureRecognizer pan 拖移 慢速移动 用于监测偏移量</div>
+<div>UILongPressGestureRecognizer longpress长按</div>
+</div>
+</en-note>
+]]></content><created>20151228T033150Z</created><updated>20160101T045449Z</updated><note-attributes><latitude>29.53323422312437</latitude><longitude>106.6010564441304</longitude><altitude>414.0309143066406</altitude><author>1357512134@qq.com</author><source>desktop.mac</source><reminder-order>0</reminder-order></note-attributes><resource><data encoding="base64">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
+X9gdFTWl7+hGAAAAAElFTkSuQmCC</data><mime>image/png</mime><width>331</width><height>79</height><duration>0</duration><recognition><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE recoIndex PUBLIC "SYSTEM" "http://xml.evernote.com/pub/recoIndex.dtd">
+<recoIndex docType="unknown" objType="image" objID="3d98456e0a5b4eace8d1b48878fdcaa9" engineVersion="6.6.33.3" recoType="service" lang="zh" objWidth="331" objHeight="79"><item x="5" y="4" w="44" h="10"><t w="42">府 門 尸</t></item><item x="156" y="3" w="25" h="13"><t w="25">IR !</t><t w="24">IR 」</t><t w="24">IR -</t><t w="23">匡</t><t w="22">LR !</t><t w="22">LR 」</t><t w="21">LR -</t><t w="21">IE !</t><t w="21">IE 」</t><t w="20">IE -</t></item><item x="188" y="5" w="27" h="11"><t w="29">措ICP</t><t w="29">瀧ICP</t><t w="29">上ICP</t><t w="29">址HCP</t><t w="28">措/ HCP</t><t w="28">瀧/ HCP</t><t w="28">, kr HCP</t><t w="28">上/ HCP</t><t w="28">勻kr HCP</t><t w="27">漳kr HCP</t></item><item x="198" y="7" w="5" h="7"><t w="28">1</t><t w="28">t</t><t w="26">I</t></item><item x="201" y="8" w="29" h="8"><t w="50">叩－</t><t w="37">叩一</t><t w="29">呻一</t><t w="27">吋一</t><t w="26">呵一</t></item><item x="234" y="5" w="12" h="9"><t w="52">ba</t></item><item x="246" y="5" w="26" h="9"><t w="43">曲－</t><t w="29">曲一</t><t w="21">晶一</t><t w="20">甜一</t><t w="19">由一</t></item><item x="276" y="5" w="35" h="10"><t w="45">80x24</t><t w="24">8ox24</t></item><item x="5" y="25" w="21" h="6"><t w="65">Last</t><t w="45">lest</t><t w="38">缸est</t><t w="37">肚est</t><t w="37">les枣</t><t w="37">les竄</t><t w="37">匕est</t><t w="37">les辈</t><t w="37">leg竄</t><t w="37">leg枣</t></item><item x="32" y="24" w="58" h="8"><t w="54">Sun</t><t w="50">t。gin·</t><t w="49">Login鲁SUN</t><t w="49">Login lsu目</t><t w="49">Login憂SUN</t><t w="49">Login贞SUN</t><t w="49">tog士輒鲁SUN</t><t w="49">tog士酉鲁SUN</t><t w="49">tog士輒贞SUN</t><t w="49">tog士酉贞SUN</t></item><item x="96" y="24" w="17" h="8"><t w="43">may</t><t w="41">mdy</t><t w="35">閥Dy</t><t w="34">闇Dy</t><t w="34">刊Dy</t><t w="34">肘Dy</t><t w="33">閻Dy</t><t w="30">閉Dy</t><t w="28">閥昌?</t><t w="26">闇昌?</t></item><item x="119" y="24" w="33" h="7"><t w="59">18 13</t><t w="52">18 1言,</t><t w="52">18 1言负</t><t w="52">18 1言贞</t><t w="52">18 1言憂</t><t w="52">18 1异,</t><t w="52">18 1异负</t><t w="52">18 1异贞</t><t w="52">18 1异憂</t><t w="52">18 13 ,</t></item><item x="154" y="24" w="16" h="7"><t w="45">54</t><t w="41">5 4于</t><t w="40">5 4鲁</t><t w="40">5 4憂</t><t w="40">5 4尘</t><t w="40">5舜于</t><t w="39">5舜鲁</t><t w="39">5舜憂</t><t w="39">5舜尘</t><t w="39">5看于</t></item><item x="172" y="24" w="11" h="7"><t w="66">15</t><t w="35">于呂</t><t w="34">1呂</t><t w="33">于吕</t><t w="33">售呂</t><t w="33">1吕</t><t w="32">售吕</t><t w="29">is</t></item><item x="189" y="26" w="12" h="5"><t w="62">on</t><t w="45">。n</t><t w="42">Gn</t><t w="33">载農</t><t w="30">纽農</t><t w="30">启農</t><t w="29">。農</t><t w="25">om</t><t w="24">Cm</t></item><item x="206" y="24" w="40" h="7"><t w="63">console</t><t w="47">gon sole</t><t w="44">载ons OLE</t><t w="43">载on sole</t><t w="43">c。ns。le</t><t w="43">go淳sole</t><t w="42">gon ? OLE</t><t w="42">go野sole</t><t w="42">go目sole</t><t w="41">载载淳sole</t></item><item x="5" y="36" w="51" h="7"><t w="50">teacher绅</t><t w="49">teacher吨</t><t w="48">teacher负一</t><t w="48">teacher贞一</t><t w="48">teacher漆一</t><t w="48">teacher憂一</t><t w="48">teacher负-</t><t w="48">teacher贞-</t><t w="48">teacher漆-</t><t w="48">teacher憂-</t></item><item x="60" y="36" w="53" h="8"><t w="59">apples cd</t><t w="53">apple ? cd</t><t w="52">apples霸檔</t><t w="52">apples霸遣</t><t w="52">apples霸哲</t><t w="51">apples霸6</t><t w="51">apples载檔</t><t w="51">apples勸檔</t><t w="51">apples载遣</t><t w="51">apples载哲</t></item><item x="119" y="35" w="118" h="9"><t w="42">oeskt。DI】</t><t w="26">oesk toDI臼</t><t w="25">oesk toDI白</t><t w="25">oesk toDI巴</t><t w="25">oesk toDI戶</t><t w="21">oesk toD1臼</t><t w="21">oesk 巴。DI臼</t><t w="20">oesk toD1白</t><t w="20">oesk 巴。DI白</t><t w="20">oesk toD1巴</t></item><item x="119" y="36" w="45" h="8"><t w="56">desktop /</t><t w="45">desk top /</t><t w="44">Oeskt。Pl</t><t w="41">desk to ? /</t><t w="41">desk ? op /</t><t w="39">des ? top /</t><t w="38">desk ?载? /</t><t w="35">des ? to ? /</t><t w="34">des ? ? op /</t><t w="33">Oesk toPI</t></item><item x="4" y="47" w="44" h="7"><t w="55">teacher,</t><t w="54">teach er,</t><t w="53">teache 「,</t><t w="52">teach er:</t><t w="52">teacher:</t><t w="51">teache 「:</t><t w="48">te通cher,</t><t w="48">te通ch er,</t><t w="48">teacher貴</t><t w="48">teacher遭</t></item><item x="50" y="47" w="40" h="9"><t w="81">Desktop</t><t w="57">Des ? top</t><t w="55">Des ? ? op</t><t w="54">Des ? to ?</t><t w="54">Des ? ? ? ?</t><t w="47">desk top</t><t w="42">desk to ?</t><t w="41">desk ? op</t><t w="41">Des 誕top</t><t w="36">desk ? ? ?</t></item><item x="96" y="47" w="71" h="9"><t w="72">apples touch</t><t w="63">apple ? touch</t><t w="61">app les touch</t><t w="57">app te ? touch</t><t w="56">apples tough</t><t w="56">apple$ touch</t><t w="53">apples全 ouch</t><t w="52">app ? ? ? touch</t><t w="52">apple ? tough</t></item><item x="172" y="48" w="26" h="6"><t w="67">test.</t><t w="48">te st.</t><t w="44">te t</t><t w="41">電est.</t><t w="36">te雪枣一</t><t w="36">te显枣一</t><t w="36">te费枣一</t><t w="35">te雪辈一</t><t w="35">te显辈一</t></item><item x="200" y="48" w="19" h="6"><t w="73">txt</t><t w="34">tx枣</t><t w="33">贯XT</t><t w="33">雯XT</t><t w="23">贯?枣</t><t w="22">tlC'.t</t><t w="22">雯?枣</t></item><item x="229" y="43" w="7" h="13"><t w="78">i</t><t w="55">l</t><t w="46">1</t><t w="27">丫</t></item><item x="5" y="59" w="43" h="7"><t w="48">teacher</t><t w="37">影载dG her鲁</t><t w="37">影载dG her负</t><t w="37">影载dG her贞</t><t w="37">影载dG her憂</t><t w="37">影甦dG her鲁</t><t w="36">影甦dG her负</t><t w="36">影甦dG her贞</t><t w="36">影甦dG her憂</t><t w="36">影霸dG her鲁</t></item><item x="50" y="59" w="52" h="8"><t w="55">desktop尋</t><t w="53">desktop鵡</t><t w="53">desktop憑</t><t w="53">desktop僵</t><t w="47">Desktop</t><t w="45">desktops</t><t w="43">desk top尋</t><t w="43">desk top鵡</t><t w="43">desk top憑</t><t w="43">desk top僵</t></item><item x="102" y="59" w="29" h="8"><t w="45">PPi载$</t><t w="44">Ppt载$</t><t w="43">PPi霸$</t><t w="43">Ppt霸$</t><t w="43">PPi甦$</t><t w="43">Ppt甦$</t><t w="43">Ppt怨$</t><t w="43">PPi怨$</t><t w="43">PPi载竄</t><t w="43">Ppt载竄</t></item><item x="135" y="57" w="7" h="10"><t w="76">I</t><t w="47">圓</t><t w="30">暑</t><t w="27">員</t><t w="26">署</t><t w="26">1</t><t w="26">量</t></item></recoIndex>]]></recognition><resource-attributes><timestamp>19700101T000000Z</timestamp><reco-type>unknown</reco-type></resource-attributes></resource></note>
+</en-export>
